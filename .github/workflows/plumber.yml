@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - tmp-ci-run
 
 permissions:
   contents: read
@@ -13,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     # Runs in this repository only, like the release doctor: the score
     # reads this repository's settings (branch protection).
-    if: github.repository == 'cloudflare/terraform-provider-cloudflare'
+    if: github.repository == 'Totara-thib/terraform-provider-cloudflare'
     permissions:
       contents: read
       # Plumber reads the workflow states and one run log to prove the
